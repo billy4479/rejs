@@ -4,10 +4,5 @@ module.exports = {
 	theme: {
 		extend: {}
 	},
-	plugins: [],
-	safelist: [
-		{
-			pattern: /ml-(2|4|6|8)/
-		}
-	]
+	plugins: []
 };

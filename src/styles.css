@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 body {
-	width: 85%;
-	margin: 0 auto;
+  width: 85%;
+  margin: 0 auto;
+}
+
+input,
+button {
+  @apply rounded shadow py-2 px-3 bg-slate-200;
 }
