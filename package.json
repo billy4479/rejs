@@ -39,6 +39,8 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "puppeteer": "^19.5.2"
+    "chrome-aws-lambda": "^10.1.0",
+    "puppeteer": "^19.5.2",
+    "puppeteer-core": "^19.5.2"
   }
 }

@@ -1,4 +1,6 @@
 import puppeteer from 'puppeteer';
+import type { Browser as BrowserCore } from 'puppeteer-core';
+import chromium from 'chrome-aws-lambda';
 
 const selectors = {
 	customerId: '#customerid',
@@ -22,7 +24,19 @@ export async function scrape(
 	username: string,
 	password: string
 ): Promise<Mark[]> {
-	const browser = await puppeteer.launch();
+	let browser: BrowserCore;
+	const path = await chromium.executablePath;
+	if (path) {
+		browser = await chromium.puppeteer.launch({
+			args: chromium.args,
+			executablePath: await chromium.executablePath,
+			headless: true
+		});
+	} else {
+		// eh, I know it's ugly but..
+		browser = (await puppeteer.launch()) as any as BrowserCore;
+	}
+	// const browser = await puppeteer.launch();
 	const page = await browser.newPage();
 
 	await page.goto('https://scuoladigitale.axioscloud.it/Pages/SD/SD_Login.aspx');
