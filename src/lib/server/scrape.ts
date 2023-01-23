@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import type { Browser as BrowserCore } from 'puppeteer-core';
-import chromium from 'chrome-aws-lambda';
+import chromium from 'chrome-aws-lambda-esbuild';
 
 const selectors = {
 	customerId: '#customerid',

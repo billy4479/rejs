@@ -39,8 +39,9 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^10.1.0",
+    "chrome-aws-lambda-esbuild": "^14.1.4",
+    "lambdafs": "^2.1.1",
     "puppeteer": "^19.5.2",
-    "puppeteer-core": "^19.5.2"
+    "puppeteer-core": "^14.1.0"
   }
 }
