@@ -38,4 +38,7 @@
 </main>
 
 <style>
+	input {
+		@apply rounded shadow py-2 px-3 bg-slate-200;
+	}
 </style>
